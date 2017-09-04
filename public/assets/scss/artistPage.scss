@@ -1,0 +1,160 @@
+.main-cont-artist{
+	position: relative;
+   	 overflow: hidden;
+	height: 100vh;
+	display: flex;
+	justify-content: space-around;
+	align-items:center;
+	.main-cont-left{
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		width:33% ;
+		.cont-left-artist{
+			font-family: "DejaVuSansMono";
+			display: flex;
+			flex-direction: column;
+			font-size: 18pt;
+			align-self:flex-start;
+			.cont-event{
+				margin: 0;
+				margin-bottom: 15px;
+				margin-top: 20px;
+				margin-left: 5px;
+				margin-right: 20px;
+				p{
+					margin: 0;
+					font-size: 16pt;
+				}
+			}
+		}
+
+	}
+	.cont-img{
+		min-height: 500px;
+		min-width: 500px;
+		background-size: 100%;
+	}
+	.info-artist{
+		cursor: move;
+		position: absolute;
+		left: 16%;
+		top: 9%;
+  		width:30%;
+  		background: url(../images/stickies.png) no-repeat;
+  		background-size: cover;
+  		padding: 20px;
+  		padding-right: 30px;
+		h1{
+			margin-top: 30px;
+			margin-bottom: 20px;
+		}
+		p{
+			font-family: "DejaVuSansMonoBold";
+			font-size: 17px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	}
+	.cont-right-invisible{
+		height: 100vh;
+		width: 33%;
+		display: flex;
+		flex-direction:column;
+  		justify-content: space-between;
+  		align-items: flex-end;
+		.logo{
+			background: url(../images/Logo_linear-72dpi-tailleOk.png) no-repeat center;
+  			margin-bottom: 30px;
+   			height: 260px;
+   			width: 20px;
+		}
+		.close{
+			cursor: pointer;
+			margin-top: 20px;
+			background: url(../images/cross.png) no-repeat center;
+   			height: 32px;
+		}
+	}
+}
+
+@media (min-width: 1280px) {
+.main-cont-artist{
+	.cont-img{
+		min-height: 300px;
+		min-width: 300px;
+	}
+	.main-cont-left{
+		.cont-left-artist{
+			.cont-event{
+				p{
+					font-size: 12pt;
+				}
+			}
+		}
+	}
+	.info-artist{
+		// height: 500px;
+		width: 25%;
+		h1{
+			font-size: 20pt;
+		}
+		p{
+			font-size: 11pt;
+		}
+
+		a{
+			font-size: 10pt;
+		}
+	}
+}
+}
+@media (max-width: 450px) {
+.main-cont-artist{
+	flex-direction:column;
+	overflow: scroll;
+	overflow-x:hidden;
+	.cont-img{
+		display: none;
+	}
+	.main-cont-left{
+		width:100%;
+		.cont-left-artist{
+			.cont-event{
+				p{
+					font-size: 8pt;
+				}
+			}
+		}
+	}
+	.info-artist{
+		position: initial;
+		width: 100%;
+		left:0;
+		h1{
+			font-size: 18pt;
+		}
+		p{
+			padding-right: 30px;
+			font-size: 10pt;
+		}
+	}
+	.cont-right-invisible{
+		display: none;
+	}
+}
+}
+@media (max-width: 330px) {
+.main-cont-artist{
+	.main-cont-left{
+		.cont-left-artist{
+			.cont-event{
+				p{
+					font-size: 7pt;
+				}
+			}
+		}
+	}
+
+}	
+}
